@@ -5,6 +5,6 @@
       1. Terminal 1: `roslaunch project2 world.launch`
       2. Terminal 2: `roslaunch ball_chaser ball_chaser.launch`
     
-   - **Final output**:
+   
    
    
