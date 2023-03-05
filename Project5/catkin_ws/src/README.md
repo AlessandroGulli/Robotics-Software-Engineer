@@ -3,7 +3,8 @@
 ### Introduction
    - Aim of the final project was to combine what has been learned in the entire program to simulate a home service robot that can map, localize, and navigate to transport objects, moving from one point to another. 
 
-![gif](https://github.com/AlessandroGulli/RoboticsSoftwareEngineer/tree/main/Project5/catkin_ws/homeservie.gif)
+
+![image](https://user-images.githubusercontent.com/29335742/222952770-7f0280a9-9a30-4a0f-80c2-722a424e490c.png)
 
 ### Overview
    - The turtlebot robot drives aroung the environment for mapping using `gmapping` package and create an **occupancy grid map**. After having the map, it uses laser range finder and odometry data to localize itself itself by utilizing **Adaptive Monte Carlo Localization (AMCL)**. User can predefine the pick-up and delivery points for the robot, and it uses those navigation goals to autonomously plans trajectory using **Dijikstra algorithm** to accomplish the task. 
