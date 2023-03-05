@@ -1,16 +1,19 @@
 #!/bin/sh
+path_catkin_ws="$(cd $(dirname "$0")/../..> /dev/null && pwd)"
 
+xterm -e "cd ${path_catkin_ws} && source ~/.bashrc && source devel/setup.bash && roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=${path_catkin_ws}/src/my_robot/worlds/world.world" &
 
-xterm -e "source devel/setup.bash && roslaunch my_robot world.launch" &
+sleep 30
 
-sleep 5
+xterm -e "cd ${path_catkin_ws} && source devel/setup.bash && roslaunch turtlebot_gazebo gmapping_demo.launch map_file:=${path_catkin_ws}/src/map/map.yaml" &
 
-xterm -e "source devel/setup.bash && roslaunch my_robot gmapping.launch" &
+sleep 30
 
+xterm -e "cd ${path_catkin_ws} && source devel/setup.bash && rosrun rviz rviz -d ${path_catkin_ws}/src/rvizConfig/home_service_rvizConfig.rviz" &
 
-sleep 5
+sleep 10
 
-xterm -e "source devel/setup.bash && roslaunch turtlebot_teleop keyboard_teleop.launch" 
+xterm -e "cd ${path_catkin_ws} && source devel/setup.bash && roslaunch turtlebot_teleop keyboard_teleop.launch" 
 
 
 
