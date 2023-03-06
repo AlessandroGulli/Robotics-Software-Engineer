@@ -10,7 +10,7 @@
 ![5ce52fc7b81cfaa168e79870d8a7b369d41ee663 (1)](https://user-images.githubusercontent.com/29335742/222970393-895db59b-1986-4d84-8afa-ba311c46f592.gif)
 
 ### Overview
-   - The turtlebot robot drives aroung the environment for mapping using `gmapping` package and create an **occupancy grid map**. After having the map, it uses laser range finder and odometry data to localize itself itself by utilizing **Adaptive Monte Carlo Localization (AMCL)**. User can predefine the pick-up and delivery points for the robot, and it uses those navigation goals to autonomously plans trajectory using **Dijikstra algorithm** to accomplish the task. 
+   - The turtlebot robot drives around the environment for mapping using `gmapping` package and create an **occupancy grid map**. After having the map, it uses laser range finder and odometry data to localize itself itself by utilizing **Adaptive Monte Carlo Localization (AMCL)**. User can predefine the pick-up and delivery points for the robot, and it uses those navigation goals to autonomously plans trajectory using **Dijikstra algorithm** to accomplish the task. 
    
 ### Tested on:
    - Ubuntu 18.04
